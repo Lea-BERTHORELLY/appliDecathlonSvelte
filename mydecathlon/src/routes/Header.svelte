@@ -20,11 +20,49 @@
         <button class="dropbtn">Sport 
           <i class="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-content">
+        <!-- <div class="dropdown-content">
           <a href="#">Alpinisme</a>
           <a href="#">Apnée</a>
           <a href="#">Aquagym</a>
+        </div> -->
+        <div class="dropdown-content">
+          <div class="dropdown-sub">
+            <button class="dropbtn-sub">
+              A
+              <i class="fa fa-caret-left"></i>
+            </button>
+            <div class="dropdown-content-sub">
+              <a href="#">Alpinisme</a>
+              <a href="#">Apnée</a>
+              <a href="#">Aquagym</a>
+            </div>
+          </div>
+          <div class="dropdown-sub">
+            <button class="dropbtn-sub">
+              B
+              <i class="fa fa-caret-left"></i>
+            </button>
+            <div class="dropdown-content-sub">
+              <a href="#">Baby foot</a>
+              <a href="#">Badminton</a>
+              <a href="#">Basketball</a>
+            </div>
+          </div>
+          <div class="dropdown-sub">
+            <button class="dropbtn-sub">
+              C
+              <i class="fa fa-caret-left"></i>
+            </button>
+            <div class="dropdown-content-sub">
+              <a href="#">Chasse pêche sous-marine</a>
+              <a href="#">Cerf volants</a>
+              <a href="#">Canoe Kayak</a>
+            </div>
+          </div>          
         </div>
+        <!-- <ul class="drowdown-content">
+          <li herf="#"> Alpinisme</li>
+        </ul> -->
       </div>
     </div> 
   </div>
@@ -272,7 +310,7 @@
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdown .dropbtn,.dropbtn-sub {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -288,7 +326,7 @@
   color: white;
 }
 
-.dropdown-content {
+.dropdown-content, .dropdown-content-sub {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -296,14 +334,29 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+.dropdown-content-sub{
+  left: -160px;
+}
 
-.dropdown-content a {
+
+.dropdown-content a,.dropbtn-sub {
   float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+}
+.dropbtn-sub{
+  color: #1083b8;
+  font-weight: bold;
+}
+
+.dropdown-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1083b8;
+  font-weight: bold;
 }
 
 .dropdown-content a:hover {
@@ -314,6 +367,9 @@
   display: block;
 }
 
+.dropdown-sub:hover .dropdown-content-sub {
+  display: block;
+}
 
 
 
