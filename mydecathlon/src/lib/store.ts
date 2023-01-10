@@ -30,7 +30,7 @@ import { writable } from 'svelte/store';
 			plus_46 : 3,
 			homme : 3,
 			femme : 9,
-			sport : "equitation"
+			sport : "Equitation"
 
 		},
 		{
@@ -48,7 +48,7 @@ import { writable } from 'svelte/store';
 			plus_46 : 8,
 			homme : 3,
 			femme : 9,
-			sport : "equitation"
+			sport : "Equitation"
 		},
 		{
 			id: 3,
@@ -65,7 +65,7 @@ import { writable } from 'svelte/store';
 			plus_46 : 3,
 			homme : 7,
 			femme : 5,
-			sport : "running"
+			sport : "Running"
 		},
 		{
 			id: 4,
@@ -82,7 +82,7 @@ import { writable } from 'svelte/store';
 			plus_46 : 3,
 			homme : 5,
 			femme : 6,
-			sport : "velo"
+			sport : "Velo"
 		},
 		{
 			id: 5,
@@ -99,7 +99,7 @@ import { writable } from 'svelte/store';
 			plus_46 : 6,
 			homme : 8,
 			femme : 4,
-			sport : "velo"
+			sport : "Velo"
 		},
 		{
 			id: 6,
@@ -116,7 +116,7 @@ import { writable } from 'svelte/store';
 			plus_46 : 6,
 			homme : 8,
 			femme : 4,
-			sport : "velo"
+			sport : "Velo"
 		},
 		{
 			id: 7,
@@ -133,7 +133,7 @@ import { writable } from 'svelte/store';
 			plus_46 : 3,
 			homme : 7,
 			femme : 5,
-			sport : "running"
+			sport : "Running"
 		}
 	];
 
