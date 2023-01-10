@@ -56,9 +56,9 @@
               <i class="fa fa-caret-left"></i>
             </button>
             <div class="dropdown-content-sub">
-              <a href="#">Chasse pêche sous-marine</a>
-              <a href="#">Cerf volants</a>
-              <a href="#">Canoe Kayak</a>
+              <a on:click={() => {sport.update(sport => sport="Chasse pêche sous-marine" );}}>Chasse pêche sous-marine</a>
+              <a on:click={() => {sport.update(sport => sport="Cerf volants" );}}>Cerf volants</a>
+              <a on:click={() => {sport.update(sport => sport="Canoe Kayak" );}}>Canoe Kayak</a>
               
             </div>
           </div> 
@@ -68,8 +68,8 @@
               <i class="fa fa-caret-left"></i>
             </button>
             <div class="dropdown-content-sub">
-              <a on:click={() => {sport.update(sport => sport="Chasse pêche sous-marine" );}}>Chasse pêche sous-marine</a>
-              <a on:click={() => {sport.update(sport => sport="Cerf volants" );}}>Cerf volants</a>
+              <a on:click={() => {sport.update(sport => sport="Equitation" );}}>Chasse pêche sous-marine</a>
+              <a on:click={() => {sport.update(sport => sport="Escalade" );}}>Cerf volants</a>
               <a on:click={() => {sport.update(sport => sport="equitation" );}}>Equitation</a>
             </div>
           </div>
