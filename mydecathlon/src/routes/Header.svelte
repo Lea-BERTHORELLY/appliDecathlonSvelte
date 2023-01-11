@@ -158,16 +158,27 @@
   background-color: #1083b8;
   color: white;
 }
-.dropdown-content, .dropdown-content-sub {
+.dropdown-content ,.dropdown-content-sub{
   display: none;
   position: absolute;
   background-color: transparent;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  backdrop-filter: blur(10px);
   z-index: 1;
+  backdrop-filter: blur(10px);
+
 }
-.dropdown-content-sub{
+
+.dropdown-content-sub {
+  background-color: rgba(255, 255, 255, 0.75);
+
+  display: none;
+  position: absolute;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  /* background-color: transparent; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: -1;
   left: -160px;
   margin-top: -50px;
   float: left;
