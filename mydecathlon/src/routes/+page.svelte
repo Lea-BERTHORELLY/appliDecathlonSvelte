@@ -119,7 +119,7 @@
 					{:else} <!-- On a déjà cliqué sur 3 produits, on affiche les produits qui correspondent à la variable -->
 						{#if $sport==""}
 							{#each products as product}
-								{#if (Math.abs((product.csp_moins-$csp_moins))+Math.abs((product.csp_med-$csp_med))+Math.abs((product.csp_plus-$csp_plus))+Math.abs((product.moins_15_ans-$moins_15_ans))+Math.abs((product.entre_16_25_ans-$entre_16_25_ans))+Math.abs((product.entre_26_45_ans-$entre_26_45_ans))+Math.abs((product.plus_46-$plus_46))+Math.abs((product.homme-$homme))+Math.abs((product.femme-$femme)))<=15}
+								{#if (Math.sqrt(Math.pow((product.csp_moins-$csp_moins),2)+Math.pow((product.csp_med-$csp_med),2)+Math.pow((product.csp_plus-$csp_plus),2)+Math.pow((product.moins_15_ans-$moins_15_ans),2)+Math.pow((product.entre_16_25_ans-$entre_16_25_ans),2)+Math.pow((product.entre_26_45_ans-$entre_26_45_ans),2)+Math.pow((product.plus_46-$plus_46),2)+Math.pow((product.homme-$homme),2)+Math.pow((product.femme-$femme),2)))<=5}
 									<div class="w3-third w3-container w3-margin-bottom">
 										<a href="#"><img src={product.image} width=400 height=auto style="width:100%"> </a>
 										<p style="font-size: smaller;">{product.name}<br><b>{product.price}€</b></p>	
@@ -131,7 +131,7 @@
 						{:else}
 							{#each products as product}
 								{#if product.sport==$sport}
-									{#if (Math.abs((product.csp_moins-$csp_moins))+Math.abs((product.csp_med-$csp_med))+Math.abs((product.csp_plus-$csp_plus))+Math.abs((product.moins_15_ans-$moins_15_ans))+Math.abs((product.entre_16_25_ans-$entre_16_25_ans))+Math.abs((product.entre_26_45_ans-$entre_26_45_ans))+Math.abs((product.plus_46-$plus_46))+Math.abs((product.homme-$homme))+Math.abs((product.femme-$femme)))<=15}
+									{#if (Math.sqrt(Math.pow((product.csp_moins-$csp_moins),2)+Math.pow((product.csp_med-$csp_med),2)+Math.pow((product.csp_plus-$csp_plus),2)+Math.pow((product.moins_15_ans-$moins_15_ans),2)+Math.pow((product.entre_16_25_ans-$entre_16_25_ans),2)+Math.pow((product.entre_26_45_ans-$entre_26_45_ans),2)+Math.pow((product.plus_46-$plus_46),2)+Math.pow((product.homme-$homme),2)+Math.pow((product.femme-$femme),2)))<=5}
 										<div class="w3-third w3-container w3-margin-bottom">
 											<a href="#"><img src={product.image} width=400 height=auto style="width:100%"> </a>
 											<p style="font-size: smaller;">{product.name}<br><b>{product.price}€</b></p>	
@@ -158,7 +158,7 @@
 					{:else} 
 						{#each products as product}
 							{#if product.categorie==$categorie} 
-								{#if (Math.abs((product.csp_moins-$csp_moins))+Math.abs((product.csp_med-$csp_med))+Math.abs((product.csp_plus-$csp_plus))+Math.abs((product.moins_15_ans-$moins_15_ans))+Math.abs((product.entre_16_25_ans-$entre_16_25_ans))+Math.abs((product.entre_26_45_ans-$entre_26_45_ans))+Math.abs((product.plus_46-$plus_46))+Math.abs((product.homme-$homme))+Math.abs((product.femme-$femme)))<=15}
+								{#if (Math.sqrt(Math.pow((product.csp_moins-$csp_moins),2)+Math.pow((product.csp_med-$csp_med),2)+Math.pow((product.csp_plus-$csp_plus),2)+Math.pow((product.moins_15_ans-$moins_15_ans),2)+Math.pow((product.entre_16_25_ans-$entre_16_25_ans),2)+Math.pow((product.entre_26_45_ans-$entre_26_45_ans),2)+Math.pow((product.plus_46-$plus_46),2)+Math.pow((product.homme-$homme),2)+Math.pow((product.femme-$femme),2)))<=5}
 									<div class="w3-third w3-container w3-margin-bottom">
 										<a href="#"><img src={product.image} width=400 height=auto style="width:100%"> </a>
 										<p style="font-size: smaller;">{product.name}<br><b>{product.price}€</b></p>	
@@ -179,8 +179,8 @@ h1 {
 }
 .w3-margin-bottom {
 	width: 290px;
-  	height: 500px;
-  	overflow: hidden; 
-  	white-space: nowrap;
+  height: 500px;
+  overflow: hidden; 
+  white-space: nowrap;
 }
 </style>
