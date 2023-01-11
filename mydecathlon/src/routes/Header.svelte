@@ -9,7 +9,7 @@
   categorie.subscribe($ => $categorie)()
   sport.subscribe($ => $sport)()
 </script>
-
+  
   <div class="navbar">
     <a class="active" on:click={() => {categorie.update(categorie => categorie="" ), sport.update(sport => sport="");}}>Tous nos produits</a> 
     <div class="topnav-right">
@@ -144,11 +144,18 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  cursor: pointer;
 }
 .dropdown {
   float: left;
   overflow: hidden;
+  cursor: pointer;
 }
+
+.dropdown button{
+  cursor: pointer;
+}
+
 .dropdown .dropbtn,.dropbtn-sub {
   font-size: 16px;  
   border: none;
@@ -173,7 +180,7 @@
   z-index: 1;
 }
 .dropdown-content-sub{
-  left: -160px;
+  left: 160px;
   margin-top: -50px;
   float: left;
   width: 50%;
