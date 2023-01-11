@@ -177,4 +177,10 @@
 h1 {
 	width: 100%;
 }
+.w3-margin-bottom {
+	width: 290px;
+  	height: 500px;
+  	overflow: hidden; 
+  	white-space: nowrap;
+}
 </style>
