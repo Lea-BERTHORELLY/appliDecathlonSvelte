@@ -5,11 +5,9 @@
 </svelte:head>
 
 <script>
-	import { page } from '$app/stores';
   import { categorie, sport } from '$lib/store';
   categorie.subscribe($ => $categorie)()
   sport.subscribe($ => $sport)()
-
 </script>
 
   <div class="navbar">
@@ -22,11 +20,6 @@
         <button class="dropbtn">Sport 
           <i class="fa fa-caret-down"></i>
         </button>
-        <!-- <div class="dropdown-content">
-          <a href="#">Alpinisme</a>
-          <a href="#">Apnée</a>
-          <a href="#">Aquagym</a>
-        </div> -->
         <div class="dropdown-content">
           <div class="dropdown-sub">
             <button class="dropbtn-sub">
@@ -37,6 +30,8 @@
               <a on:click={() => {sport.update(sport => sport="Alpinisme" );}}>Alpinisme</a>
               <a on:click={() => {sport.update(sport => sport="Apnée" );}}>Apnée</a>
               <a on:click={() => {sport.update(sport => sport="Aquagym" );}}>Aquagym</a>
+              <a on:click={() => {sport.update(sport => sport="Arts du cirque" );}}>Arts du cirque</a>
+              <a on:click={() => {sport.update(sport => sport="Athlétisme" );}}>Athlétisme</a>
             </div>
           </div>
           <div class="dropdown-sub">
@@ -46,7 +41,9 @@
             </button>
             <div class="dropdown-content-sub">
               <a on:click={() => {sport.update(sport => sport="Baby foot" );}}>Baby foot</a>
+              <a on:click={() => {sport.update(sport => sport="Baby gym" );}}>Baby gym</a>
               <a on:click={() => {sport.update(sport => sport="Badminton" );}}>Badminton</a>
+              <a on:click={() => {sport.update(sport => sport="Baseball" );}}>Baseball</a>
               <a on:click={() => {sport.update(sport => sport="Basketball" );}}>Basketball</a>
             </div>
           </div>
@@ -56,10 +53,18 @@
               <i class="fa fa-caret-left"></i>
             </button>
             <div class="dropdown-content-sub">
-              <a on:click={() => {sport.update(sport => sport="Chasse pêche sous-marine" );}}>Chasse pêche sous-marine</a>
+              <a on:click={() => {sport.update(sport => sport="Canoe kayak" );}}>Canoë kayak</a> 
               <a on:click={() => {sport.update(sport => sport="Cerf volants" );}}>Cerf volants</a>
-              <a on:click={() => {sport.update(sport => sport="Canoe Kayak" );}}>Canoe Kayak</a>
-              
+              <a on:click={() => {sport.update(sport => sport="Chasse pêche sous-marine" );}}>Chasse pêche sous-marine</a>
+            </div>
+          </div>
+          <div class="dropdown-sub">
+            <button class="dropbtn-sub">
+              D
+              <i class="fa fa-caret-left"></i>
+            </button>
+            <div class="dropdown-content-sub">
+              <a on:click={() => {sport.update(sport => sport="Danses" );}}>Danses</a>   
             </div>
           </div> 
           <div class="dropdown-sub">
@@ -68,51 +73,70 @@
               <i class="fa fa-caret-left"></i>
             </button>
             <div class="dropdown-content-sub">
-              <a on:click={() => {sport.update(sport => sport="Equitation" );}}>Chasse pêche sous-marine</a>
-              <a on:click={() => {sport.update(sport => sport="Escalade" );}}>Cerf volants</a>
-              <a on:click={() => {sport.update(sport => sport="equitation" );}}>Equitation</a>
+              <a on:click={() => {sport.update(sport => sport="Escalade" );}}>Escalade</a>
+              <a on:click={() => {sport.update(sport => sport="Escrime" );}}>Escrime</a>
+              <a on:click={() => {sport.update(sport => sport="Equitation" );}}>Equitation</a>
             </div>
           </div>
-            
+          <div class="dropdown-sub">
+            <button class="dropbtn-sub">
+              F
+              <i class="fa fa-caret-left"></i>
+            </button>
+            <div class="dropdown-content-sub">
+              <a on:click={() => {sport.update(sport => sport="Fitness" );}}>Fitness</a>
+              <a on:click={() => {sport.update(sport => sport="Fléchettes" );}}>Fléchettes</a>
+              <a on:click={() => {sport.update(sport => sport="Floorball" );}}>Floorball</a> 
+            </div>
+          </div>
+          <div class="dropdown-sub">
+            <button class="dropbtn-sub">
+              G
+              <i class="fa fa-caret-left"></i>
+            </button>
+            <div class="dropdown-content-sub">
+              <a on:click={() => {sport.update(sport => sport="Golf" );}}>Golf</a>
+              <a on:click={() => {sport.update(sport => sport="Gymnastique artistique et rythmique" );}}>Gymnastique artistique et rythmique</a>
+              <a on:click={() => {sport.update(sport => sport="CGymnastique éducative et sportive" );}}>Gymnastique éducative et sportive</a>  
+            </div>
+          </div>
+          <div class="dropdown-sub">
+            <button class="dropbtn-sub">
+              H
+              <i class="fa fa-caret-left"></i>
+            </button>
+            <div class="dropdown-content-sub">
+              <a on:click={() => {sport.update(sport => sport="Handball");}}>Handball</a>
+              <a on:click={() => {sport.update(sport => sport="Hockey sur gazon" );}}>Hockey sur gazon</a>
+              <a on:click={() => {sport.update(sport => sport="Hockey sur glace" );}}>Hockey sur glace</a>  
+            </div>
+          </div>
+
         </div>
-        
-        <!-- <ul class="drowdown-content">
-          <li herf="#"> Alpinisme</li>
-        </ul> -->
       </div>
     </div> 
   </div>
 
 <style>
-
-
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right;
 }
-
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav-right {
     float: none;
     display: block;
   }
-
 }
-
-
-
-
 .navbar a.active {
   background-color: #1083b8;
   color: white;
 }
-
 .navbar {
   overflow: hidden;
   background-color: transparent;
 }
-
 .navbar a {
   float: left;
   font-size: 16px;
@@ -121,12 +145,10 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-
 .dropdown {
   float: left;
   overflow: hidden;
 }
-
 .dropdown .dropbtn,.dropbtn-sub {
   font-size: 16px;  
   border: none;
@@ -137,12 +159,10 @@
   font-family: inherit;
   margin: 0;
 }
-
 .navbar a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover{
   background-color: #1083b8;
   color: white;
 }
-
 .dropdown-content, .dropdown-content-sub {
   display: none;
   position: absolute;
@@ -152,14 +172,12 @@
   backdrop-filter: blur(10px);
   z-index: 1;
 }
-
-
 .dropdown-content-sub{
-  left: 160px;
+  left: -160px;
   margin-top: -50px;
+  float: left;
+  width: 50%;
 }
-
-
 .dropdown-content a,.dropbtn-sub {
   float: none;
   color: black;
@@ -172,21 +190,16 @@
   color: #1083b8;
   font-weight: bold;
 }
-
 .dropdown-content h3 {
   font-size: 16px;
   font-weight: 600;
   color: #1083b8;
   font-weight: bold;
 }
-
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 .dropdown-sub:hover .dropdown-content-sub {
   display: block;
 }
-
 </style>
