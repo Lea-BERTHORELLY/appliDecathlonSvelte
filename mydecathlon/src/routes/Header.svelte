@@ -100,18 +100,6 @@
               <a on:click={() => {sport.update(sport => sport="CGymnastique éducative et sportive" );}}>Gymnastique éducative et sportive</a>  
             </div>
           </div>
-          <div class="dropdown-sub">
-            <button class="dropbtn-sub">
-              H
-              <i class="fa fa-caret-left"></i>
-            </button>
-            <div class="dropdown-content-sub">
-              <a on:click={() => {sport.update(sport => sport="Handball");}}>Handball</a>
-              <a on:click={() => {sport.update(sport => sport="Hockey sur gazon" );}}>Hockey sur gazon</a>
-              <a on:click={() => {sport.update(sport => sport="Hockey sur glace" );}}>Hockey sur glace</a>  
-            </div>
-          </div>
-
         </div>
       </div>
     </div> 
@@ -180,7 +168,7 @@
   z-index: 1;
 }
 .dropdown-content-sub{
-  left: 160px;
+  left: -160px;
   margin-top: -50px;
   float: left;
   width: 50%;
